@@ -26,7 +26,7 @@ def get_candidates_by_name(candidate_name):
     list_candidates = load_candidates_from_json(path)
     list_name_candidates = []
     for data in list_candidates:
-        if candidate_name in data['name'].lower():
+        if candidate_name.title() in data['name']:
             list_name_candidates.append(data)
 
     return list_name_candidates
