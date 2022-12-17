@@ -17,19 +17,18 @@ def profile(x):
     return render_template("single.html", candidate=candidate)
 
 
-@main.route("/search/<candidate_name>")
+@main.route("/search/<candidate_name>.lower()")
 def search_profile(candidate_name):
     candidates = get_candidates_by_name(candidate_name)
     len_candidates = len(candidates)
     return render_template("search.html", candidates=candidates, len_candidates=len_candidates)
 
 
-@main.route('/skill/<skill_name>')
+@main.route("/skill/<skill_name>")
 def qq(skill_name):
     candidates = get_candidates_by_skill(skill_name)
     len_candidates = len(candidates)
     return render_template("skill.html", candidates=candidates, skill_name=skill_name, len_candidates=len_candidates)
 
 
-print(get_candidates_by_name("S"))
 main.run(port=1000, debug=True)
