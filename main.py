@@ -31,4 +31,4 @@ def qq(skill_name):
     return render_template("skill.html", candidates=candidates, skill_name=skill_name, len_candidates=len_candidates)
 
 
-main.run(port=1000, debug=True)
+main.run(port=8000, debug=True)
