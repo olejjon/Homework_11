@@ -17,7 +17,7 @@ def profile(x):
     return render_template("single.html", candidate=candidate)
 
 
-@main.route("/search/<candidate_name>.lower()")
+@main.route("/search/<candidate_name>")
 def search_profile(candidate_name):
     candidates = get_candidates_by_name(candidate_name)
     len_candidates = len(candidates)
