@@ -42,6 +42,3 @@ def get_candidates_by_skill(skill_name):
                 list_skills.append(data)
 
     return list_skills
-
-
-print(get_candidates_by_name("S"))
